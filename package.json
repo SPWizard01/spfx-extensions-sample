@@ -1,0 +1,14 @@
+{
+  "name": "spfx-extensions-sample",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "@spfx-extensions/core": "^0.0.4"
+  }
+}
