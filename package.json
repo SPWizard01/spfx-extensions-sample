@@ -3,12 +3,13 @@
   "module": "index.ts",
   "type": "module",
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "bun-dev-server": "^0.0.6"
   },
   "peerDependencies": {
     "typescript": "^5.6.3"
   },
   "dependencies": {
-    "@spfx-extensions/core": "^0.0.4"
+    "@spfx-extensions/core": "^0.0.6"
   }
 }

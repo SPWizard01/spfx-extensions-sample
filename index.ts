@@ -6,6 +6,7 @@ const app: SPFxExtensionAppRegistration = {
     name: "Sample App",
     description: "Sample App",
     isWebPartApp: true,
+    hideAppSelectorWhenAppLoaded: true,
     async onInstanceRequested(newInstance) {
         const thisModule = await import("./src/app")
         return launchSPFxExtensionApp(thisModule, newInstance);
