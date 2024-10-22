@@ -1,9 +1,9 @@
 import { build, $ } from "bun"
 
 await $`rm -rf dist`
-await $`tsc`
+// await $`tsc`
 const result = await build({
-    entrypoints: ["./index.ts"],
+    entrypoints: ["./index.ts", "./src/doom/doom.ts"],
     outdir: "dist"
 })
 if (result.success) {
