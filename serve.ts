@@ -1,12 +1,14 @@
 import { startBunDevServer } from "bun-dev-server"
 import { file } from "bun"
 import { bunConfig } from "./bun.config";
+
 startBunDevServer({
     buildConfig: {
         ...bunConfig,
         sourcemap: "linked",
-
     },
+    watchDir: "src",
+    enableTypeScriptWatch: true,
     cleanServePath: true,
     writeManifest: true,
     tls: {

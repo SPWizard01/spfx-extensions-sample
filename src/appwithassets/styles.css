@@ -1,0 +1,5 @@
+@import url("./another.css");
+@import url("./another2.css");
+#someotherid {
+    background-image: url("./assets/anotherimage.jpg");
+}

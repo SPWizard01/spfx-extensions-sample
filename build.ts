@@ -3,7 +3,7 @@ import styleLoader from "bun-style-loader";
 import dynamicPathPlugin from "bun-dynamic-path";
 import { bunConfig } from "./bun.config";
 await $`rm -rf dist`
-// await $`tsc`
+await $`tsc`
 const result = await build({
     ...bunConfig
 })

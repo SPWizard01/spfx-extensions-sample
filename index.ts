@@ -9,8 +9,8 @@ const allDefinitions: SPFxExtensionAppRegistration[] = [
         isWebPartApp: true,
         hideAppSelectorWhenAppLoaded: true,
         async onInstanceRequested(newInstance) {
-            const thisModule = await import("./src/pnp/app")
-            return launchSPFxExtensionApp(thisModule, newInstance);
+            // const thisModule = await import("./src/pnp/app")
+            // return launchSPFxExtensionApp(thisModule, newInstance);
         },
     },
     {
@@ -20,8 +20,8 @@ const allDefinitions: SPFxExtensionAppRegistration[] = [
         isWebPartApp: true,
         hideAppSelectorWhenAppLoaded: false,
         async onInstanceRequested(newInstance) {
-            const thisModule = await import("./src/doom/index")
-            return launchSPFxExtensionApp(thisModule, newInstance);
+            // const thisModule = await import("./src/doom/index")
+            // return launchSPFxExtensionApp(thisModule, newInstance);
         },
     },
     {

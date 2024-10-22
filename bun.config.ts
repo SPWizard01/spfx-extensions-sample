@@ -10,5 +10,8 @@ export const bunConfig: BuildConfig = {
     define: {
         "BUILD_DATE": JSON.stringify(new Date().toISOString()),
     },
-    plugins: [styleLoader(), dynamicPathPlugin({ fileExtensions: ["jpg"], includeHash: true })]
+    plugins: [
+        styleLoader(), 
+        dynamicPathPlugin({ fileExtensions: ["jpg"], includeHash: true })
+    ]
 }
