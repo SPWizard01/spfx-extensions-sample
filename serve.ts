@@ -1,17 +1,13 @@
 import { startBunDevServer } from "bun-dev-server"
 import { file } from "bun"
-
+import { bunConfig } from "./bun.config";
 startBunDevServer({
     buildConfig: {
-        entrypoints: ["./index.ts"],
-        outdir: "./dist",
+        ...bunConfig,
         sourcemap: "linked",
-        define: {
-            "BUILD_DATE": JSON.stringify(new Date().toISOString()),
-        },
-        emitDCEAnnotations: true,
-        minify: false
+
     },
+    cleanServePath: true,
     writeManifest: true,
     tls: {
         cert: file("./serve_cert.pem"),

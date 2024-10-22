@@ -2,6 +2,8 @@ import { type SPFxExtensionAppInstance } from "@spfx-extensions/core";
 import { spfi, SPFx } from "@pnp/sp"
 import { getSPFiCompatibleContextAsync } from "@spfx-extensions/core/context";
 import "@pnp/sp/webs";
+import styles from "./styles.css";
+console.log("Styles", styles);
 
 const ctx = await getSPFiCompatibleContextAsync();
 

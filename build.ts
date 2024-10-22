@@ -1,10 +1,11 @@
 import { build, $ } from "bun"
-
+import styleLoader from "bun-style-loader";
+import dynamicPathPlugin from "bun-dynamic-path";
+import { bunConfig } from "./bun.config";
 await $`rm -rf dist`
 // await $`tsc`
 const result = await build({
-    entrypoints: ["./index.ts", "./src/doom/doom.ts"],
-    outdir: "dist"
+    ...bunConfig
 })
 if (result.success) {
     console.table(result.outputs.map((output) => ({

@@ -12,6 +12,8 @@
   "dependencies": {
     "@pnp/sp": "^4.6.0",
     "@spfx-extensions/core": "^0.0.8",
+    "bun-dynamic-path": "^1.0.1",
+    "bun-style-loader": "^0.4.0",
     "esbuild": "^0.24.0"
   }
 }

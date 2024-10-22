@@ -7,10 +7,10 @@ export function launch(instance: SPFxExtensionAppInstance) {
         fram.style.height = "470px"
         fram.style.border = "none";
         instance.element.appendChild(fram);
-        const doc = fram.contentDocument || fram.contentWindow.document;
-        doc.open();
+        const doc = fram.contentDocument || fram.contentWindow?.document;
+        doc?.open();
 
-        doc.write(`
+        doc?.write(`
         <div id="dosbox"></div>
         <br/>
         <button onclick="dosbox.requestFullScreen();">Make fullscreen</button>
@@ -28,7 +28,7 @@ export function launch(instance: SPFxExtensionAppInstance) {
         });
         </script>
         `);
-        doc.close();
+        doc?.close();
  
     }
     return () => {
