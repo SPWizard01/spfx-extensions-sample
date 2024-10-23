@@ -6,6 +6,12 @@ startBunDevServer({
     buildConfig: {
         ...bunConfig,
         sourcemap: "linked",
+        splitting: true,
+        naming: {
+            asset: "assets/[name].[ext]",
+            chunk: "chunk-[name]-[hash].[ext]",
+        },
+        target: "bun"
     },
     watchDir: "src",
     enableTypeScriptWatch: true,

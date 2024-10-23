@@ -9,8 +9,8 @@ const allDefinitions: SPFxExtensionAppRegistration[] = [
         isWebPartApp: true,
         hideAppSelectorWhenAppLoaded: true,
         async onInstanceRequested(newInstance) {
-            // const thisModule = await import("./src/pnp/app")
-            // return launchSPFxExtensionApp(thisModule, newInstance);
+            const thisModule = await import("./src/pnp/app")
+            return launchSPFxExtensionApp(thisModule, newInstance);
         },
     },
     {
@@ -20,8 +20,8 @@ const allDefinitions: SPFxExtensionAppRegistration[] = [
         isWebPartApp: true,
         hideAppSelectorWhenAppLoaded: false,
         async onInstanceRequested(newInstance) {
-            // const thisModule = await import("./src/doom/index")
-            // return launchSPFxExtensionApp(thisModule, newInstance);
+           const thisModule = await import("./src/doom/index")
+            return launchSPFxExtensionApp(thisModule, newInstance);
         },
     },
     {
@@ -32,6 +32,17 @@ const allDefinitions: SPFxExtensionAppRegistration[] = [
         hideAppSelectorWhenAppLoaded: false,
         async onInstanceRequested(newInstance) {
             const thisModule = await import("./src/appwithassets/index")
+            return launchSPFxExtensionApp(thisModule, newInstance);
+        },
+    },
+    {
+        id: "6fe5e916-dc68-4454-b9b2-82f24305f0d0",
+        name: "WASM",
+        description: "Showcases WASM",
+        isWebPartApp: true,
+        hideAppSelectorWhenAppLoaded: false,
+        async onInstanceRequested(newInstance) {
+            const thisModule = await import("./src/wasm/index")
             return launchSPFxExtensionApp(thisModule, newInstance);
         },
     }
