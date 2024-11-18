@@ -1,7 +1,7 @@
 import type { SPFxExtensionAppRegistration } from "@spfx-extensions/core"
 import { launchSPFxExtensionApp } from "@spfx-extensions/core/launcher"
 
-const allDefinitions: SPFxExtensionAppRegistration[] = [
+export const allDefinitions: SPFxExtensionAppRegistration[] = [
     {
         id: "6fe5e916-dc68-4454-b9b2-82f24305f0c7",
         name: "Sample App",
@@ -9,7 +9,7 @@ const allDefinitions: SPFxExtensionAppRegistration[] = [
         isWebPartApp: true,
         hideAppSelectorWhenAppLoaded: true,
         async onInstanceRequested(newInstance) {
-            const thisModule = await import("./src/pnp/app")
+            const thisModule = await import("./pnp/app")
             return launchSPFxExtensionApp(thisModule, newInstance);
         },
     },
@@ -20,7 +20,7 @@ const allDefinitions: SPFxExtensionAppRegistration[] = [
         isWebPartApp: true,
         hideAppSelectorWhenAppLoaded: false,
         async onInstanceRequested(newInstance) {
-           const thisModule = await import("./src/doom/index")
+           const thisModule = await import("./doom/index")
             return launchSPFxExtensionApp(thisModule, newInstance);
         },
     },
@@ -31,7 +31,7 @@ const allDefinitions: SPFxExtensionAppRegistration[] = [
         isWebPartApp: true,
         hideAppSelectorWhenAppLoaded: false,
         async onInstanceRequested(newInstance) {
-            const thisModule = await import("./src/appwithassets/index")
+            const thisModule = await import("./appwithassets/index")
             return launchSPFxExtensionApp(thisModule, newInstance);
         },
     },
@@ -42,10 +42,10 @@ const allDefinitions: SPFxExtensionAppRegistration[] = [
         isWebPartApp: true,
         hideAppSelectorWhenAppLoaded: false,
         async onInstanceRequested(newInstance) {
-            const thisModule = await import("./src/wasm/index")
+            const thisModule = await import("./wasm/index")
             return launchSPFxExtensionApp(thisModule, newInstance);
         },
     }
 ]
 
-allDefinitions.forEach((def) => window.__SPFxExtensions.RegisterApp(def));
+export default allDefinitions

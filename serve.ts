@@ -16,7 +16,7 @@ startBunDevServer({
     watchDir: "src",
     enableTypeScriptWatch: true,
     cleanServePath: true,
-    writeManifest: true,
+    writeManifest: false,
     tls: {
         cert: file("./serve_cert.pem"),
         key: file("./serve_key.pem"),

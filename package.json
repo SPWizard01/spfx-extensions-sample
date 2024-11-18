@@ -4,16 +4,19 @@
   "type": "module",
   "devDependencies": {
     "@types/bun": "latest",
-    "bun-dev-server": "^0.1.0"
+    "@jgoz/esbuild-plugin-livereload": "^2.1.2",
+    "@jgoz/esbuild-plugin-typecheck": "^4.0.2",
+    "bun-dev-server": "^0.2.0",
+    "bun-dynamic-path": "^1.0.1",
+    "bun-style-loader": "^0.4.0",
+    "esbuild": "^0.24.0",
+    "esbuild-sass-plugin": "^3.3.1"
   },
   "peerDependencies": {
     "typescript": "^5.6.3"
   },
   "dependencies": {
     "@pnp/sp": "^4.6.0",
-    "@spfx-extensions/core": "^0.0.8",
-    "bun-dynamic-path": "^1.0.1",
-    "bun-style-loader": "^0.4.0",
-    "esbuild": "^0.24.0"
+    "@spfx-extensions/core": "^0.1.2"
   }
 }
